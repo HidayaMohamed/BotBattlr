@@ -6,7 +6,7 @@ function BotCard({bot, onClick, onDischarge }) {
     <div className="bot-card">
       <h2>{bot.name}</h2>
       <img src={bot.avatar_url} alt={bot.name} />
-      <BotCard />
+      <BotSpecs bot={bot}/>
       <button onClick={() => onClick(bot)}>Release</button>
       <button
         onClick={(e) => {

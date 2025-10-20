@@ -5,15 +5,15 @@ function BotSpecs({ bot }) {
 
   return (
     <div className="bot-details">
-      <buttton
+      <button
         className="details-btn"
         onClick={(e) => {
-          e.stopPropagation;
+          e.stopPropagation();
           setShowDetails((prev) => !prev);
         }}
       >
         {showDetails ? "Hide Details" : "Show Details"}
-      </buttton>
+      </button>
       {showDetails && (
         <p>
           Health - {bot.health}
