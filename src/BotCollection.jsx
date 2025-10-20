@@ -14,15 +14,20 @@ function BotCollection({onEnlist}) {
   
   
   return (
-    <div>
+    <div className="bot-collection">
       <h2>Bot collection</h2>
       <ul>
         {bots.map((bot) => (
           <li key={bot.id}>
-            <img src={bot.avatar_url} alt="Bot avatar" />  -{bot.name}
-            <button onClick={() => {
-              onEnlist(bot)
-            }}>Enlist</button>
+            <img src={bot.avatar_url} alt="Bot avatar" />
+            <h2>{bot.name}</h2>   
+            <button
+              onClick={() => {
+                onEnlist(bot);
+              }}
+            >
+              Enlist
+            </button>
           </li>
         ))}
       </ul>
