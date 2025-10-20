@@ -32,8 +32,13 @@ function App() {
 
   return (
     <div>
+    
       <BotCollection bots={bots} onEnlist={handleEnlistment} />
-      <BotArmy armyBots={armyBots} onRelease={handleRelease}  onDischarge={handleDischarge} />
+      <BotArmy
+        armyBots={armyBots}
+        onRelease={handleRelease}
+        onDischarge={handleDischarge}
+      />
     </div>
   );
 }
