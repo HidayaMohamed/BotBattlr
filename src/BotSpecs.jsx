@@ -1,9 +1,33 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-function BotSpecs() {
+function BotSpecs({ bot }) {
+    const [showDetails, setShowDetails] = useState(false)
+
   return (
-    <div>BotSpecs</div>
-  )
+    <div className="bot-details">
+      <buttton
+        className="details-btn"
+        onClick={(e) => {
+          e.stopPropagation;
+          setShowDetails((prev) => !prev);
+        }}
+      >
+        {showDetails ? "Hide Details" : "Show Details"}
+      </buttton>
+      {showDetails && (
+        <p>
+          Health - {bot.health}
+          <br></br>
+          Damage - {bot.damage} <br></br>
+          Armor - {bot.armor} <br></br>
+          Class - {bot.bot_class} <br></br>
+          CatchPharse - {bot.catchphrase} <br></br>
+          created - {bot.created_at} <br></br>
+          Updated at - {bot.updated_at}
+        </p>
+      )}
+    </div>
+  );
 }
 
 export default BotSpecs
