@@ -2,6 +2,7 @@ import { useState } from 'react';
 import React from 'react'
 import BotCollection from './BotCollection'
 import BotArmy from './BotArmy';
+import WelcomeMessage from './WelcomeMessage';
 
 function App() {
   const [bots, setBots] = useState([]);
@@ -26,13 +27,13 @@ function App() {
       setBots(bots.filter((b) => b.id !== bot.id));
       setArmyBots(armyBots.filter((b) => b.id !== bot.id));
     })
-      .catch((err) => console.error("DElete failed", err));
+      .catch((err) => console.error("Delete failed", err));
   }
 
 
   return (
     <div>
-    
+      <WelcomeMessage />
       <BotCollection bots={bots} onEnlist={handleEnlistment} />
       <BotArmy
         armyBots={armyBots}
