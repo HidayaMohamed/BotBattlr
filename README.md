@@ -1,16 +1,41 @@
-# React + Vite
+# BOT BATTLR
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Date, 2025/10/20
 
-Currently, two official plugins are available:
+#### By *Hidaya Mohamed Mohamud*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
+Bot Battlr is a React-based web app that allows users to view, enlist, and manage an army of battle-ready bots.
+Users can browse a collection of bots fetched from a local API, add their favorites to a personal army, and remove or permanently discharge bots as needed.
 
-## React Compiler
+Each bot displays key stats such as health, damage, armor, and class, with the option to reveal detailed information on demand. The app demonstrates clean component design, dynamic state management with React hooks, and interactive UI behavior.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Installation
+You use git clone to be able to download the documents in the GitHub
 
-## Expanding the ESLint configuration
+## Installation Requirements
+Git                                             
+GitHub
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation instruction
+```
+Git clone https://github.com/HidayaMohamed/BotBattlr
+
+```
+
+## Technologies used
+HTML                                            
+CSS                                             
+Github                                         
+Javascript
+JSX
+React
+Vite
+
+## Support and contact details
+GitHub - github.com/HidayaMohamed               
+email - hidayamohaed002@gmail.com
+
+### License
+The content of this site is licensed under the MIT license
+Copyright (c) 2025.
