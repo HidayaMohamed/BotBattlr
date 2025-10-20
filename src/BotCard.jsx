@@ -4,7 +4,7 @@ function BotCard({bot, onClick, onDischarge }) {
   return (
     <div className="bot-card" onClick={() => onClick(bot)}>
       <h2>{bot.name}</h2>
-      <img src="{bot.avatar_url}" alt="{bot.name}" />
+      <img src={bot.avatar_url} alt={bot.name} />
       <p>
         Health - {bot.health}
         <br></br>
@@ -14,13 +14,16 @@ function BotCard({bot, onClick, onDischarge }) {
         CatchPharse - {bot.catchphrase} <br></br>
         created - {bot.created_at} <br></br>
         Updated at - {bot.updated_at}
-          </p>
-          <button onClick={(e) => {
-              e.stopPropagation()
-              onDischarge(bot)
-          }
-          } > x Discharge
-          </button>
+      </p>
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          onDischarge(bot);
+        }}
+      >
+        {" "}
+        x Discharge
+      </button>
     </div>
   );
 }

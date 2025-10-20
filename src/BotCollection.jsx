@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import BotSpecs from './BotSpecs'
 
-function BotCollection() {
-    const [bots, setBots] = useState([])
+function BotCollection({onEnlist}) {
+  const [bots, setBots] = useState([])
+  
 
     useEffect(() => {
         fetch("http://localhost:3000/bots")
@@ -17,7 +19,10 @@ function BotCollection() {
       <ul>
         {bots.map((bot) => (
           <li key={bot.id}>
-           <img src={bot.avatar_url} alt="Bot avatar"/>  -{bot.name}
+            <img src={bot.avatar_url} alt="Bot avatar" />  -{bot.name}
+            <button onClick={() => {
+              onEnlist(bot)
+            }}>Enlist</button>
           </li>
         ))}
       </ul>

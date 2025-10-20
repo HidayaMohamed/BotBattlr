@@ -17,14 +17,16 @@ function App() {
   setArmyBots(armyBots.filter(b => b.id !== bot.id));
   }
 
-  function handleDischarge() {
-    fetch("http://localhost:3000/bots", {
+  function handleDischarge(bot) {
+    fetch(`http://localhost:3000/bots/${bot.id}`, {
       method: "DELETE",
-    }).then(res => res.json())
+    })
       .then(() => {
-      setBots(bots.filter(b => b.id === bot.id))
-      })
-    .catch(err => console.error("DElete failed", err))
+      // Remove the bot from both arrays if needed
+      setBots(bots.filter((b) => b.id !== bot.id));
+      setArmyBots(armyBots.filter((b) => b.id !== bot.id));
+    })
+      .catch((err) => console.error("DElete failed", err));
   }
 
 
