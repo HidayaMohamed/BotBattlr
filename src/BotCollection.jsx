@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
+// imports BotSpecs
 import BotSpecs from './BotSpecs'
 
-
-function BotCollection({onEnlist}) {
+// Takes in onEnlist as a prop
+function BotCollection({ onEnlist }) {
+  // set the bots to an empty array
   const [bots, setBots] = useState([])
   
-
+// UseEffect with an empty array dependency that fetches data from the db.json and sets setBot to the data
     useEffect(() => {
         fetch("http://localhost:3000/bots")
             .then(res => res.json())
@@ -13,7 +15,7 @@ function BotCollection({onEnlist}) {
         .catch(error => console.error('Error fetching data:', error))
     }, [])
   
-  
+  // The bots are displayed here as an unordered list.
   return (
     <div className="bot-collection">
       <h2>Bot collection</h2>
@@ -22,7 +24,8 @@ function BotCollection({onEnlist}) {
           <li key={bot.id}>
             <img src={bot.avatar_url} alt="Bot avatar" />
             <h2>{bot.name}</h2> 
-            <BotSpecs bot={bot}/>
+            <BotSpecs bot={bot} />
+            {/* Clicking this button adds a bot to the army. */}
             <button
               onClick={() => {
                 onEnlist(bot);
